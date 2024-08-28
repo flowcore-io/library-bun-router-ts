@@ -1,0 +1,20 @@
+#nonk8s
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bun-router
+  description: A simple router using Bun's native features
+  annotations:
+    github.com/project-slug: flowcore-io/library-bun-router-ts
+  links:
+    - url: https://www.npmjs.com/package/@flowcore/bun-router
+      title: Library NPM Link
+spec:
+  type: library
+  owner: backend
+  system: system:public-tools
+  lifecycle: experimental
+
+  dependsOn:
+    - component:flowcore-microservice
+    - component:testing-flowcore-microservice
